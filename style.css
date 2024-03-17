@@ -1,0 +1,80 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+.first {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  background: linear-gradient(45deg, #08001f, #30197d);
+  color: #fff;
+}
+.container {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 800px;
+  height: 180px;
+  transform: translate(-50%, -50%);
+}
+.clock {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(235, 0, 255, 0.11);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  backdrop-filter: blur(40px);
+}
+.container::before {
+  content: "";
+  position: absolute;
+  left: -3%;
+  top: -30%;
+  width: 180px;
+  height: 180px;
+  background-color: #f41b75;
+  z-index: -1;
+  border-radius: 5px;
+}
+.container::after {
+  content: "";
+  position: absolute;
+  right: -3%;
+  bottom: -20%;
+  width: 180px;
+  height: 180px;
+  background-color: #419aff;
+  z-index: -1;
+  border-radius: 50%;
+}
+
+.clock > span {
+    font-size: 80px;
+    height: 114px;
+    user-select: none;
+}
+.clock .clock_item {
+  width: 110px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+}
+.clock .clock_item span:nth-child(1) {
+  font-size: 80px;
+}
+.clock .clock_item span:nth-child(2) {
+  font-size: 16px;
+}
+.clock span::after {
+  font-size: 16px;
+  position: absolute;
+  left: 50%;
+  bottom: -5px;
+}
